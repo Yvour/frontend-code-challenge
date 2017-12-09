@@ -10,17 +10,31 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
-        use: ['babel-loader'],
-      },
+use:[{
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              ['es2015', {modules: false}],
+              'react'
+            ],
+            babelrc: false
+          }
+        }]      },
       {
         test: /\.css$/,
-        use: ['style-loader'],
+        use: 'css-loader'
       },
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin()
+    new HtmlWebpackPlugin(
+   {
+template: __dirname + "/src/app/index.html",
+filename: "index.html",
+inject: "body"
+}
+)
   ],
 };
