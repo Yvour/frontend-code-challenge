@@ -6,7 +6,6 @@ export default class Puzzle extends
 React.Component {
 
         componentWillMount() {
-            console.log("component did mount");
  ////CORS «Access-Control-Allow-Origin»)
             fetch("https://api.mcmakler.de/v1/advertisements")
                 .then((response) => {

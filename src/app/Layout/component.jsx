@@ -5,15 +5,25 @@ import PropTypes from 'prop-types';
 export default class Layout extends
 React.Component {
 	render() {
-		return ( < div className="layout_container">
-		<div classname="photo">
+		return ( 
+		<div className="layout_container">
+		<div className="photo">
+		<img src="{this.props.imgSrc}/>
 		</div>
-		<div classname="info">
-		<div classname="title">
+		<div className="info">
+		<div className="title">
 		{this.props.title}
-	</div>
+		</div>
+		<div className="address">
+		{this.porps.address}
+		</div>
+		<div className="bottom-info>
+		<div className="price">{this.props.price}</div>
+		<div className="numberOfRooms">{this.props.numberOfRooms}</div>
+		<div className="total-area">{this.props.totalArea}</div>
+		</div>
 
-	</div>
+	 </div>
 
 	</div>)
 	}
