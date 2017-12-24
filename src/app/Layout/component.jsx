@@ -8,16 +8,16 @@ React.Component {
 		return ( 
 		<div className="layout_container">
 		<div className="photo">
-		<img src="{this.props.imgSrc}/>
+		<img src="{this.props.imgSrc}"/>
 		</div>
 		<div className="info">
 		<div className="title">
 		{this.props.title}
 		</div>
 		<div className="address">
-		{this.porps.address}
+		{this.props.address}
 		</div>
-		<div className="bottom-info>
+		<div className="bottom-info">
 		<div className="price">{this.props.price}</div>
 		<div className="numberOfRooms">{this.props.numberOfRooms}</div>
 		<div className="total-area">{this.props.totalArea}</div>
