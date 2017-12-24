@@ -6,31 +6,24 @@ export default class Puzzle extends
 React.Component {
 
         componentWillMount() {
- ////CORS «Access-Control-Allow-Origin»)
-            fetch("https://api.mcmakler.de/v1/advertisements")
-                .then((response) => {
-                	console.log("response");
-                    let myData = response.json()
+			const req = new XMLHttpRequest();
+			req.onload = () => {
+                	
+                    let myData = req.response;
+					window.z = myData;
+					
                     // return myData;
                     this.setState({
                         data: myData
-                    })
-                })
-                .then((json) => {
-                    console.log('parsed json', json)
-                })
-                .catch((ex) => {
-                	console.log(ex);
-                    console.log('parsing failed', ex)
-                })
-
-
+			})};
+			req.open("get", "http://localhost:3000", true);
+			req.send();
         }
         
         render() {
                 console.log("render");
                 return ( < div className = "puzzle" > {
-                            (this.state.list || []).map(x => < Layout { ...x
+                            ((this.state&&Array.isArray(this.state.list) )?this.state.list : []).map(x => < Layout { ...x
                                 }
                                 />)} <
                                 /div>)
