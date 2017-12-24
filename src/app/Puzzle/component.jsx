@@ -8,13 +8,8 @@ React.Component {
         componentWillMount() {
 			const req = new XMLHttpRequest();
 			req.onload = () => {
-                	
-                    let myData = req.response;
-					window.z = myData;
-					
-                    // return myData;
                     this.setState({
-                        data: myData
+                        data: req.response
 			})};
 			req.open("get", "http://localhost:3000", true);
 			req.send();
