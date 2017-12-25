@@ -8,8 +8,12 @@ React.Component {
         componentWillMount() {
 			const req = new XMLHttpRequest();
 			req.onload = () => {
+				const answer = JSON.parse(req.response);
+				const elements = (answer.data && Array.isArray(answer.data)) ? answer.data.slice(0,10) : [];
+				window.elements = elements;
+				    
                     this.setState({
-                        data: req.response
+                        list: elements
 			})};
 			req.open("get", "http://localhost:3000", true);
 			req.send();
@@ -18,12 +22,12 @@ React.Component {
         render() {
                 console.log("render");
                 return ( < div className = "puzzle" > {
-                            ((this.state&&Array.isArray(this.state.list) )?this.state.list : []).map(x => < Layout { ...x
+                            ((this.state&&Array.isArray(this.state.list) )?this.state.list : []).map(x =>
+							<Layout key={x._id.$id}{ ...x
                                 }
-                                />)} <
-                                /div>)
+                                />)} </div>)
                             }
-                        }
+ }
 
 
                         Puzzle.propTypes = {

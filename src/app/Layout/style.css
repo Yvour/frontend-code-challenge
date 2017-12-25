@@ -1,6 +1,8 @@
 
 
 .layout_container{
-	max-width:30%;
-	
+	max-width:33%;
+	win-width:33vw;
+	border: 1px solid gray;
+	min-height: 30rem;
 }

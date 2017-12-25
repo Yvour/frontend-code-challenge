@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from "./style.css";
 import PropTypes from 'prop-types';
+console.log(styles);
 
 export default class Layout extends
 React.Component {
@@ -8,7 +9,7 @@ React.Component {
 		return ( 
 		<div className="layout_container">
 		<div className="photo">
-		<img src="{this.props.imgSrc}"/>
+		<img src={this.props.imgSrc}/>
 		</div>
 		<div className="info">
 		<div className="title">
