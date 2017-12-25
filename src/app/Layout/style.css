@@ -1,8 +1,96 @@
 
 
 .layout_container{
-	max-width:33%;
-	win-width:33vw;
+max-width:30rem;
+	min-width:30rem;
 	border: 1px solid gray;
-	min-height: 30rem;
+	min-height:40rem;
+	max-height:40rem;
+	display:table-cell;
+	float:left;
+	margin: 0.5rem;
+}
+.inner_container{
+	display:flex;
+}
+
+
+
+.photo{
+	height: 50%;
+	width:100%;
+}
+
+.purpose{
+	position:relative;
+	top:4rem;
+	left:2rem;
+	background-color:lightgray;
+	color: darkgray;
+	float:left;
+	padding:0.5rem;
+	margin-top:-2rem;
+	
+	vertical-align:middle;
+	
+}
+
+
+
+.title{
+	font-size: 1.4rem;
+	font-weight: bold;
+	height: 8vw;
+	padding:1rem;
+	max-height:20%;
+	min-height:20%;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	word-wrap:break-word;
+
+}
+.title-text{
+	min-height: 2rem;
+}
+
+.address{
+	font-size:1rem;
+	font-weight:bold;
+	color: gray;
+	min:10%;
+	padding:1rem;
+	text-align:center;
+	padding-bottom:3rem;
+	padding-top:3rem;
+	
+}
+
+.bottom-info{
+	display: table;
+    min-width: 100%;
+	min-height: 20%;
+	text-align:center;
+	font-size:1.4rem;
+}
+
+.price{
+	
+	padding-left:1rem;
+	display:table-cell;
+	min-width:50%;
+}
+
+.numberOfRooms{
+	
+	padding-left:1rem;
+	min-width:32%;
+	display:table-cell;
+}
+
+
+.total-area{
+	
+	min-width:32%;
+	border-left:1px solid lightgray;
+	display: table-cell;
 }
